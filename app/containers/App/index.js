@@ -11,6 +11,7 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 import { TrainersHome } from '../TrainersHome';
+import { PokemonList } from '../PokemonList';
 import logo from '../../images/pokemon.png';
 
 // import GlobalStyle from '../../global-styles';
@@ -55,12 +56,10 @@ export default function App() {
         <br />
         <div className="App-body">
           <Switch>
-            {/* <Route
-              path="/pokemon/page/:id"
-              component={withRouter(PokemonList)} */}
-            {/* /> */}
+            <Route path="/pokemon/page/:id" component={PokemonList} />
             {/* <Route path="/pokemon/:id" component={withRouter(Pokemon)} /> */}
             <Route path="/" element={<TrainersHome />} />
+            
             {/* <Redirect from="/" to="trainers" /> */}
           </Switch>
         </div>
